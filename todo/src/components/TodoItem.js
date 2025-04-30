@@ -64,7 +64,7 @@ const TodoItem = ({ todo }) => {
   );
 };
 
-// Стилизованные компоненты
+
 const ItemContainer = styled.div`
   display: flex;
   align-items: center;

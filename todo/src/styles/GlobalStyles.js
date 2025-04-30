@@ -13,18 +13,6 @@ export const lightTheme = {
   important: '#ff5252'
 };
 
-export const darkTheme = {
-  body: '#1a1a1a',
-  text: '#f0f0f0',
-  primary: '#6a8fc5',
-  secondary: '#3a7ca5',
-  accent: '#81d4fa',
-  cardBg: '#2d2d2d',
-  inputBg: '#3d3d3d',
-  border: '#444',
-  completedText: '#aaa',
-  important: '#ff6b6b'
-};
 
 export const GlobalStyles = createGlobalStyle`
   body {
@@ -47,5 +35,4 @@ export const GlobalStyles = createGlobalStyle`
     transition: all 0.2s;
   }
 
-  // Добавьте другие глобальные стили по необходимости
 `;

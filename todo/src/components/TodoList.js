@@ -8,11 +8,9 @@ const TodoList = ({ filter, showImportantOnly }) => {
   const { todos } = useContext(TodoContext);
   
   const filteredTodos = todos.filter(todo => {
-    // Фильтрация по статусу
+    
     if (filter === 'active' && todo.completed) return false;
     if (filter === 'completed' && !todo.completed) return false;
-    
-    // Фильтрация по важности
     if (showImportantOnly && !todo.important) return false;
     
     return true;
@@ -33,7 +31,6 @@ const TodoList = ({ filter, showImportantOnly }) => {
   );
 };
 
-// Стилизованные компоненты
 const ListContainer = styled.div`
   margin-top: 20px;
 `;

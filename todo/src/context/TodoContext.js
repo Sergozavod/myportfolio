@@ -3,7 +3,7 @@ import React, { createContext, useState, useEffect } from 'react';
 export const TodoContext = createContext();
 
 export const TodoProvider = ({ children }) => {
-  // Состояния
+  
   const [currentUser, setCurrentUser] = useState(null);
   const [users, setUsers] = useState(() => {
     const saved = localStorage.getItem('todo-users');
@@ -15,7 +15,7 @@ export const TodoProvider = ({ children }) => {
   });
   const [filter, setFilter] = useState('all');
 
-  // Сохранение пользователей
+  
   useEffect(() => {
     localStorage.setItem('todo-users', JSON.stringify(users));
     if (users.length > 0 && !currentUser) {
@@ -23,12 +23,12 @@ export const TodoProvider = ({ children }) => {
     }
   }, [users, currentUser]);
 
-  // Сохранение задач
+  
   useEffect(() => {
     localStorage.setItem('todo-tasks', JSON.stringify(todos));
   }, [todos]);
 
-  // Фильтрация задач
+  
   const getFilteredTodos = () => {
     if (!currentUser) return [];
     return todos
@@ -40,7 +40,7 @@ export const TodoProvider = ({ children }) => {
       });
   };
 
-  // Методы
+  
   const addUser = (name) => {
     const newUser = { id: Date.now(), name };
     setUsers(prev => [...prev, newUser]);

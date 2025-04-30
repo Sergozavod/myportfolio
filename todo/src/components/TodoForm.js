@@ -47,7 +47,7 @@ const TodoForm = () => {
     </FormContainer>
   );
 };
-// Стилизованные компоненты
+
 const FormContainer = styled.form`
   margin-bottom: 25px;
 `;

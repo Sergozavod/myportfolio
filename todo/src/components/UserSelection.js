@@ -10,7 +10,7 @@ const UserSelection = () => {
     setCurrentUser, 
     addUser, 
     deleteTodo,
-    setUsers // Добавлено отсутствующее свойство
+    setUsers
   } = useContext(TodoContext);
   
   const [newUserName, setNewUserName] = useState('');
@@ -90,7 +90,7 @@ const UserSelection = () => {
   );
 };
 
-// Новые стили для кнопки удаления
+
 const DeleteUserButton = styled(motion.button)`
   position: absolute;
   top: 8px;
@@ -135,7 +135,7 @@ const UserCard = styled.div`
   }
 `;
 
-// Стилизованные компоненты
+
 const UserContainer = styled.div`
   padding: 25px;
 `;
